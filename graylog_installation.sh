@@ -1,6 +1,15 @@
 #!/bin/bash
 
 # WARNING: Don't use this in production since all passwords are kept at their default.
+#This script is helpfull in installation of the graylog, elasticsearch, mongodb and java since these are the dependency of graylog-server
+#graylog-web will be also installed using this
+
+#after successful installation graylog can be accessed from
+
+#http://serverip:9000
+#default user name and password will be
+#admin/password
+#before running this script please confirm that user is added in suduers list
 
 # mongodb
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
@@ -11,6 +20,8 @@ sudo apt-get install mongodb-org
 # Install Java
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
+echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install oracle-java8-installer
 
 
