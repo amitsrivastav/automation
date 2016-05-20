@@ -11,8 +11,8 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install oracle-java8-set-default -y
 java -version
-echo "deb http://www.apache.org/dist/cassandra/debian 23x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
-echo "deb-src http://www.apache.org/dist/cassandra/debian 23x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+echo "deb http://www.apache.org/dist/cassandra/debian 22x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+echo "deb-src http://www.apache.org/dist/cassandra/debian 22x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
 sudo gpg --keyserver pgp.mit.edu --recv-keys F758CE318D77295D
 sudo gpg --export --armor F758CE318D77295D | sudo apt-key add -
 sudo gpg --keyserver pgp.mit.edu --recv-keys 2B5C1B00
