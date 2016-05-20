@@ -1,11 +1,6 @@
-# automation scripts for some of specific tools deployment in just in time
-This script is helpfull in installation of the graylog, elasticsearch, mongodb and java since these are the dependency of graylog-server
-graylog-web will be also installed using this 
-
-after successful installation graylog can be accessed from 
-
-http://serverip:9000
-default user name and password will be 
-admin/password
-before running this script please confirm that user is added in suduers list
+#Automation Scripts Helpfull to DevOps
+following scripts are added to the repo
+* graylog-server with graylog-web setup with all its dependency like mongodb and elasticsearch
+* Cassendra server setup on a standalone node 
+* 
 
